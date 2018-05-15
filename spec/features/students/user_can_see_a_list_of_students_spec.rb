@@ -7,7 +7,7 @@ describe 'user visits /students' do
     student_3 = Student.create!(name: 'Red')
 
     visit "/students"
-
+    save_and_open_page
     expect(page).to have_content(student_1.name)
     expect(page).to have_content(student_2.name)
     expect(page).to have_content(student_3.name)
