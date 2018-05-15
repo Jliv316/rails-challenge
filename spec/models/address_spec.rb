@@ -3,9 +3,7 @@ require 'rails_helper'
 describe Student, type: :model do
   describe 'Validations' do
     context "valid attributes" do
-      it "is valid with a name" do
-        student = Student.new(name: "Jimbo")
-        expect(student).to be_valid
+      it { should validate_presence_of(:description, :city, :state, :zip, :street) }
       end
     end
   end
