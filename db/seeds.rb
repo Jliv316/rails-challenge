@@ -11,6 +11,3 @@ STUDENTS = ['Jim', 'Fred', 'John', 'Kevin', 'Mike', 'George']
 STUDENTS.each do |name|
   student = Student.create!(name: name)
 end
-
-
-rails g migration CreateStudents name:string
